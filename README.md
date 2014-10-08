@@ -20,11 +20,17 @@ var array = [1, 32, 65, 32]
 * `min`---- Grabs the lowest value of an array ex) min(array) === 1
 
 * `each`---Excutes a provided function for each array element.
-ex) function buddy(num) {
-	console.log(num)
-}
-	array.forEach(buddy) should print 1, 32, 65, 32
+ex) var friend = ['Ryan',"David", "Isaac"];
 
+var each = function (items, callback) {
+	for (var i=0; i<items.length; i++) {
+		callback(items[i]);
+	}
+}
+
+each(names, function(person) {
+	console.log("Hello," + person);
+});
 
 
 * `map`- Grabs an original array and creates a new array calling a provided function on every element of the array
